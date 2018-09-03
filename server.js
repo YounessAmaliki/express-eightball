@@ -10,3 +10,17 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
+
+app.get('/', (req, res) => {
+   res.redirect('/ask')
+})
+
+
+app.get('/ask', (req, res) => {
+   res.render('ask.ejs', {})
+})
+
+
+
+
